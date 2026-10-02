@@ -1,0 +1,87 @@
+name: User Story
+description: A user-facing piece of functionality that belongs to an epic
+title: "[User Story]: "
+labels: ["user-story"]
+# assignees: ["your-github-username"]   # optional: auto-assign someone
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for a piece of functionality described from the user's point of view.
+        After creating the story, set its **parent epic** (Relationships → Add parent) and add its tasks as **sub-issues**.
+
+  - type: input
+    id: parent_epic
+    attributes:
+      label: Parent epic
+      description: Issue number of the epic this story belongs to.
+      placeholder: e.g. #4
+    validations:
+      required: true
+
+  - type: textarea
+    id: story
+    attributes:
+      label: User story
+      description: Describe the need in the "As a / I want / So that" format.
+      value: |
+        As a ...
+        I want ...
+        So that ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance criteria
+      description: The conditions that must be met for this story to be accepted.
+      placeholder: |
+        - [ ] Given ..., when ..., then ...
+        - [ ] ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Designs, dependencies, links or any other useful context.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: dropdown
+    id: estimate
+    attributes:
+      label: Estimate (story points)
+      options:
+        - "1"
+        - "2"
+        - "3"
+        - "5"
+        - "8"
+        - "13"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Before submitting
+      options:
+        - label: I have searched existing issues and this user story does not already exist.
+          required: true
+        - label: The acceptance criteria are clear and testable.
+          required: true

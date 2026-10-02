@@ -1,0 +1,83 @@
+name: Epic
+description: A large body of work that will be broken down into user stories
+title: "[Epic]: "
+labels: ["epic"]
+# assignees: ["your-github-username"]   # optional: auto-assign someone
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for a large piece of work that spans several user stories.
+        After creating the epic, add its user stories as **sub-issues** (Relationships → Add sub-issue).
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What outcome or business value does this epic deliver?
+      placeholder: Enable warehouse staff to track RFID-tagged assets in real time.
+    validations:
+      required: true
+
+  - type: textarea
+    id: background
+    attributes:
+      label: Background
+      description: Why is this needed now? Add any context, links or references.
+    validations:
+      required: false
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What is in scope and what is explicitly out of scope?
+      placeholder: |
+        In scope:
+        - ...
+        Out of scope:
+        - ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: user_stories
+    attributes:
+      label: Planned user stories
+      description: High-level list of the user stories expected under this epic.
+      placeholder: |
+        - User Story: ...
+        - User Story: ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: definition_of_done
+    attributes:
+      label: Definition of done
+      description: How do we know this epic is complete?
+      placeholder: |
+        - [ ] All user stories are closed
+        - [ ] ...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Before submitting
+      options:
+        - label: I have searched existing issues and this epic does not already exist.
+          required: true
